@@ -63,3 +63,9 @@ module.exports = {
   }
 };
 ```
+
+## babel
+```
+$yarn add babel-cli babel-preset-evn -D
+$touch .babelrc
+```
