@@ -16,6 +16,7 @@ $touch ./dist/index.html
 ```bash
 $yarn add eslint eslint-plugin-vue --dev  
 $./node_modules/.bin/eslint --init
+$touch .eslintignore
 ```
 
 ### eslintrc(設定ファイル)の編集
@@ -29,9 +30,36 @@ module.exports = {
 };
 
 ```
-### package.json(設定ファイル)の編集
+### eslintの対象外の設定  
+```
+node_modules/
+dist/bundle.js
+```
+
+### package.jsonの編集
 ```json
 "scripts": {
   "lint": "./node_modules/.bin/eslint ./src/*.js"
 },
+```
+## webpack
+```
+$yarn add webpack webpack-cli -D  
+$touch webpack.config.js
+```
+
+### webpack.config.js(設定ファイル)の編集
+```js
+const path = require('path');
+
+module.exports = {
+  mode: 'production',
+  //entryパス
+  entry: './src/main.js',
+  //dist
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  }
+};
 ```
