@@ -3,5 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/akane-aa/vue-bolierplate-sample.git",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ./src/*.js"
+  },
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-plugin-vue": "^4.7.1"
+  },
+  "dependencies": {}
 }
