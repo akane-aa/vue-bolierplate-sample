@@ -9,6 +9,8 @@
     "webpack": "./node_modules/.bin/webpack"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^5.4.0",
     "eslint-plugin-vue": "^4.7.1",
     "webpack": "^4.17.0",
